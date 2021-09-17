@@ -25,11 +25,18 @@
             </div>
         </div>
 
-        <div class="notes">
-            <h2>Under Construction</h2>
-            This web page is an ongoing project <br/>
-            Its current appearance is not representative of the final product!!<br/>
-            <br/>
+        <div class="center-wrap">
+            <div class="center-left">
+                <img id="head-shot" src="images/Bjorndal_L.jpg" alt="Portrait photo of Lars Bjorndal" >
+            </div>
+            <div class="center-right">
+                <div id="intro-me">
+                    <h2>Under Construction</h2>
+                    This web page is an ongoing project <br/>
+                    Its current appearance is not representative of the final product!!<br/>
+                    <br/>
+                </div>
+            </div>
         </div>
 
         <div class="port-wrap">
@@ -37,15 +44,17 @@
 
                 <div class="port-item-wrap">
                     <div class="port-img-background" style="background-image:url(images/Res_back.jpg)" alt="resume photo"></div>
-                    <!--Photo by Andrea Piacquadio from Pexels-->>
+                    <!--Photo by Andrea Piacquadio from Pexels-->
+                    
                     <div class="img-text-wrap">
                         <div class="logo-wrapper">
                             <img src="images/res_logo.png">                           
                         </div>
                         <div class="subtitle">
-                            My resume should go here
+                            View My Resume
                         </div>
                     </div>
+                
                 </div>
 
                 <div class="port-item-wrap">
@@ -53,10 +62,11 @@
                     <!--https://www.pexels.com/photo/books-in-black-wooden-book-shelf-159711/-->
                     <div class="img-text-wrap">
                         <div class="logo-wrapper">
-                            <img src="images/Coursework_logo.png">                           
+                            <img src="images/Coursework_logo.png">
+                            <!--update with: https://pnghost.com/png-free/owl-clip-art-owls-png/eyx2g4UurU-->                           
                         </div>
                         <div class="subtitle">
-                            This could be my course work
+                            Notes from Coursework
                         </div>
                     </div>
                 </div>
@@ -67,11 +77,11 @@
 
                     <div class="img-text-wrap">
                         <div class="logo-wrapper">
-                            <img src="images/Coursework_logo.png"> 
+                            <img src="images/research_logo.png"> 
                             <!--update with: https://pnghost.com/png-free/science-laboratory-experiment-science-png/AWkyyRvtPS-->
                         </div>
                         <div class="subtitle">
-                            Research work
+                            Research Experience
                         </div>
                     </div>
                 </div>
@@ -81,19 +91,44 @@
                     <!--https://www.pexels.com/photo/brown-wooden-dock-surrounded-with-green-grass-near-mountain-under-white-clouds-and-blue-sky-at-daytime-808465/-->
                     <div class="img-text-wrap">
                         <div class="logo-wrapper">
-                            <img src="images/Coursework_logo.png">
+                            <img src="images/project_logo.png">
                             <!--Update with: https://pnghost.com/png-free/idea-computer-icons-innovation-management-creativity-dexters-laboratory-png/06yysqaj0m-->
-                            <!--or: https://pnghost.com/png-free/idea-icon-design-idea-png/WYRYcB9npT-->
+                            <!--mor neutral option: https://pnghost.com/png-free/idea-icon-design-idea-png/WYRYcB9npT-->
                         </div>
                         <div class="subtitle">
-                            Projects, I am now working on building my own web page
+                            Personal Projects
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <div class="contact-wrap">
+            This websight is under construction, but this is my contact information<br>
+            <a href="mailto: larscron@gmail.com"> Send me an email</a>
+        </div>
+
     </div>
 </body>
+
+<!--I believe this is java script code. It should be better analyzed-->
+<script> 
+    const portfolioItems = document.querySelectorAll('.port-item-wrap');
+  
+    portfolioItems.forEach(portfolioItem => {
+      portfolioItem.addEventListener('mouseover', () => {
+        console.log(portfolioItem.childNodes[1].classList)
+        portfolioItem.childNodes[1].classList.add('image-blur');
+      });
+  
+      portfolioItem.addEventListener('mouseout', () => {
+        console.log(portfolioItem.childNodes[1].classList)
+        portfolioItem.childNodes[1].classList.remove('image-blur');
+      });
+    });
+  
+  </script>
+
 </html>
 
 
